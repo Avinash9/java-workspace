@@ -9,7 +9,7 @@ public class Collection1 {
 	private HashMap<String, Integer> hashMap;
 	private ArrayList<String> arrayList;
 	private LinkedList<String> linkList;
-
+	private ArrayList<TreeMap<String, String>> compositeStructure;
 	public static void main(String[] args) {
 		System.out.println("in main method!!!!!");
 		Collection1 col = new Collection1();
@@ -17,6 +17,7 @@ public class Collection1 {
 		System.out.println("Hash Map:" + col.setHashmap());
 		System.out.println("Array List:"+col.setArrayList());
 		System.out.println("Link List"+col.setLinkList());
+		System.out.println("composite structure is"+col.setCompositeStructure());
 	}
 
 	/*
@@ -116,6 +117,27 @@ public class Collection1 {
 		linkList.addFirst("added first");
 		linkList.add(2, "added now");
 		return linkList;
+		
+	}
+	
+	
+	
+	/*
+	 * ######################### CompositeStructure Example################
+	 * 
+	 * */
+	
+	public ArrayList<TreeMap<String ,String>> setCompositeStructure()
+	{
+		compositeStructure=new ArrayList<TreeMap<String,String>>();
+		for(String key:treeMap.keySet())
+		{
+			TreeMap<String, String> testTreeMap=new TreeMap<String,String>();
+			testTreeMap.put("name", "test1");
+			testTreeMap.put("id", "1");
+			compositeStructure.add(testTreeMap);
+		}
+		return compositeStructure;
 		
 	}
 
