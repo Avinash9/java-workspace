@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.TreeMap;
 
 public class Collection1 {
 	private TreeMap<String, Integer> treeMap;
 	private HashMap<String, Integer> hashMap;
 	private ArrayList<String> arrayList;
+	private LinkedList<String> linkList;
 
 	public static void main(String[] args) {
 		System.out.println("in main method!!!!!");
@@ -14,6 +16,7 @@ public class Collection1 {
 		System.out.println("Tree Map:" + col.setTreeMap());
 		System.out.println("Hash Map:" + col.setHashmap());
 		System.out.println("Array List:"+col.setArrayList());
+		System.out.println("Link List"+col.setLinkList());
 	}
 
 	/*
@@ -76,12 +79,15 @@ public class Collection1 {
 	 */
 	public ArrayList<String> setArrayList() {
 		arrayList = new ArrayList<String>();
-		arrayList.add("test");
-		arrayList.add("test1");
-		arrayList.add("1");
-		arrayList.add("b");
-		arrayList.add("a");
-		arrayList.add("1");
+		arrayList.add("first");
+		arrayList.add("second");
+		arrayList.add("third");
+		arrayList.add("fourth");
+		arrayList.add("Fifth");
+		arrayList.add(1, "added now");
+		arrayList.add(0, "added first");
+		int lastIndex=arrayList.size()-1;
+		arrayList.add(lastIndex, "added last");
 		
 		/*
 		 * Iterator i=arrayList.iterator();
@@ -91,6 +97,26 @@ public class Collection1 {
 		}*/
 //		System.out.println(arrayList.get(3));
 		return arrayList;
+	}
+	
+	/*
+	 * ######################### LinkList Example################
+	 *the LinkedList class provides uniformly named methods to get, 
+	 *remove and insert an element at the beginning and end of the list
+	 *reverse LinkedList content
+	 **/
+	
+	public LinkedList<String> setLinkList()
+	{
+		linkList=new LinkedList<String>();
+		linkList.add("first");
+		linkList.add("second");
+		linkList.add("third");
+		linkList.add("fourth");
+		linkList.addFirst("added first");
+		linkList.add(2, "added now");
+		return linkList;
+		
 	}
 
 }
